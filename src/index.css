@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100;
+  font-family: "Montserrat", sans-serif;
+}
+
+.roboto-slab {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.right-76 {
+  right: 19rem;
+}
+
+.-left-192 {
+  left: -40rem;
+}
+
+.size-custom {
+  width: 48rem;
+  height: 48rem;
+}
+
+.custom-btn-shadow {
+  box-shadow: -2px 2px 0px 0px #0f172a;
+  -webkit-box-shadow: -2px 2px 0px 0px #0f172a;
+  -moz-box-shadow: -2px 2px 0px 0px #0f172a;
+
+  transition: all 0.1s;
+}
+
+.custom-btn-shadow:hover {
+  box-shadow: 0px 0px 0px 0px #0f172a;
+  -webkit-box-shadow: 0px 0px 0px 0px #0f172a;
+  -moz-box-shadow: 0px 0px 0px 0px #0f172a;
+
+  transition: all 0.3s;
+}
+
+.custom-btn-shadow-t {
+  box-shadow: -2px 2px 0px 0px #0f766e;
+  -webkit-box-shadow: -2px 2px 0px 0px #0f766e;
+  -moz-box-shadow: -2px 2px 0px 0px #0f766e;
+
+  transition: all 0.1s;
+}
+
+.custom-btn-shadow-t:hover {
+  box-shadow: 0px 0px 0px 0px #0f766e;
+  -webkit-box-shadow: 0px 0px 0px 0px #0f766e;
+  -moz-box-shadow: 0px 0px 0px 0px #0f766e;
+
+  transition: all 0.3s;
+}
+
+.custom-bubble-shadow {
+  box-shadow: 190px -200px 0px 340px #0f766d25;
+  -webkit-box-shadow: 190px -200px 0px 340px #0f766d25;
+  -moz-box-shadow: 190px -200px 0px 340px #0f766d25;
+}
+
+.custom-lg-vh {
+  height: calc(100vh - 71px);
+}
