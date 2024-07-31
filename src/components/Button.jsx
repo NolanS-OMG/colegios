@@ -1,14 +1,14 @@
-const Button = ({ className, href, children, onClick }) => {
+const Button = ({ className, href, children, onClick, onClickProps }) => {
   const classes = `${className}`;
 
   const renderButton = () => (
-    <button className={classes} onClick={() => onClick()}>
+    <button className={classes} onClick={() => onClick({ ...onClickProps })}>
       {children}
     </button>
   )
 
   const renderLink = () => (
-    <a href={href} className={classes}>
+    <a href={href} className={classes} onClick={() => onClick({ ...onClickProps })}>
       {children}
     </a>
   )
