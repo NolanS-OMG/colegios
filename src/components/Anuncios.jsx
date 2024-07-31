@@ -1,9 +1,9 @@
 import { anuncios } from "../constants";
 
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
 import Button from "./Button";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Anuncios = () => {
   const [selectedSlide, setSelectedSlide] = useState(anuncios[0].id);
@@ -16,36 +16,68 @@ const Anuncios = () => {
       behavior: "smooth"
     })
   }
+  const nextSlide = () => {
+    let actualIndex = anuncios.findIndex(item => item.id === selectedSlide);
+    if (actualIndex + 1 >= anuncios.length) {
+      actualIndex = 0;
+    } else {
+      actualIndex += 1;
+    }
+    changeSlide({ slide: anuncios[actualIndex].id });
+  }
+  const backSlide = () => {
+    let actualIndex = anuncios.findIndex(item => item.id === selectedSlide);
+    if (actualIndex - 1 < 0) {
+      actualIndex = anuncios.length - 1;
+    } else {
+      actualIndex -= 1;
+    }
+    changeSlide({ slide: anuncios[actualIndex].id })
+  }
   return (
-    <section className="custom-lg-vh z-40">
-      <div className="w-full lg:w-fit lg:h-full relative aspect-square lg:aspect-video my-8 mx-auto p-2 lg:p-12">
-        <div id="sliderContainer" className="flex relative w-full h-full overflow-hidden slider rounded-lg border-2 border-slate-900">
+    <section className="custom-lg-vh z-0 mt-6 lg:m-0">
+      <div className="w-full lg:w-fit lg:h-full aspect-square lg:aspect-video mx-auto relative">
+        <div id="sliderContainer" className="flex relative w-full h-full overflow-hidden slider">
+
           {anuncios.map(item => {
             return (
-              <article key={`slider${item.id}`} id={`slider${item.id}`} className="-z-10 w-full h-full relative bg-slate-900">
-                <div className="absolute top-1/2 -translate-y-1/2 lg:translate-y-0 left-0 w-full px-2 lg:px-12">
-                  <h4 className="z-10 text-slate-100 font-bold text-3xl">{item.title}</h4>
-                  <p className="z-10 text-slate-100">{item.description}</p>
+              <article key={`slider${item.id}`} id={`slider${item.id}`} className="w-full h-full relative bg-slate-900">
+                <div className="absolute top-0 left-0 w-full h-full px-2 lg:px-12 flex flex-col z-10">
+                  <Button className="w-fit mt-auto p-4 lg:p-6 lg:pl-0 lg:pb-0 relative custom-scale-svg-hover" href="#">
+                    <h4 className="inline text-slate-100 font-bold text-3xl lg:text-5xl">{item.title}</h4>
+                    <ExternalLink color="#f1f5f9" className="absolute top-0 right-0 scale-75 lg:scale-100" />
+                  </Button>
+                  <p className="hidden lg:block mb-20 text-slate-100 text-sm">{item.description}</p>
                 </div>
-                <img src={item.image_url} alt="" className="absolute top-0 left-0 w-full h-full object-cover opacity-70 -z-1" />
+                <img src={item.image_url} alt="" className="absolute top-0 left-0 w-full h-full object-cover opacity-70 z-0" />
               </article>
             )
           })}
+
         </div>
-        <div className="flex gap-x-4 absolute bottom-1.5 lg:bottom-20 left-1/2 -translate-x-1/2 z-20">
+
+        <div className="hidden lg:flex justify-center gap-x-4 absolute bottom-0 lg:bottom-6 left-1/2 -translate-x-1/2 z-10">
           {anuncios.map(item => {
             return (
               <Button
                 key={`sliderButton${item.id}`}
-                className={`w-3 h-3 p-1 rounded-full bg-white opacity-75 transition-all 
-                ease-in-out duration-100 hover:opacity-100 hover:scale-110 
-                ${selectedSlide === item.id ? "scale-110 opacity-100" : ""}`}
+                className={`w-3 h-3 p-1 rounded-full bg-white transition-all 
+                ease-in-out duration-100 hover:opacity-100 hover:scale-110 m-auto 
+                ${selectedSlide === item.id ? "scale-110 opacity-100" : "opacity-75"}`}
                 onClick={changeSlide}
                 onClickProps={{ slide: item.id }}
               ></Button>
             )
           })};
         </div>
+
+        <Button className={`absolute top-1/2 left-1 lg:left-8 -translate-y-1/2 w-fit h-fit p-4 lg:p-2 z-10 rounded-full custom-arrow-hover`} onClick={backSlide}>
+          <ChevronLeft color="white" size={40} />
+        </Button>
+        <Button className={`absolute top-1/2 right-1 lg:right-8 -translate-y-1/2 w-fit h-fit p-4 lg:p-2 z-10 rounded-full custom-arrow-hover`} onClick={nextSlide}>
+          <ChevronRight color="white" size={40} />
+        </Button>
+
       </div>
     </section>
   )

@@ -7,6 +7,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 .roboto-slab {
   font-family: "Fira Sans", sans-serif;
 }
@@ -17,6 +21,11 @@ body {
 
 .-left-192 {
   left: -40rem;
+}
+
+.size-237 {
+  width: 60rem;
+  height: 60rem;
 }
 
 .custom-left-middle {
@@ -135,6 +144,25 @@ body {
 .custom-principal-btn:hover {
   transform: scale(1.05);
   box-shadow: 0px 5px 20px 1px rgba(15, 118, 110, 0.4);
+  transition: all 0.3s;
+}
+
+.custom-arrow-hover {
+  transition: all 0.15s;
+}
+
+.custom-arrow-hover:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s;
+}
+
+.custom-scale-svg-hover {
+  transition: all 0.15s;
+}
+
+.custom-scale-svg-hover:hover>svg {
+  transform: scale(1.1);
   transition: all 0.3s;
 }
 

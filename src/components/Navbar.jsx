@@ -38,12 +38,12 @@ const Navbar = () => {
   }
 
   const blurAmount = Math.min(scrollY / 50, 6);
-  const opacityAmount = Math.min(scrollY / 150, 0.15);
+  const opacityAmount = Math.min(scrollY / 150, 0.25);
 
   return (
     <nav
-      className="fixed top-0 left-0 w-screen lg:w-full bg-transparent p-6 lg:p-4 z-50"
-      style={{
+      className={`fixed top-0 left-0 w-screen lg:w-full p-6 lg:p-4 z-50 bg-local ${openNavigation ? "backdrop-blur" : "backdrop-blur-0"}`}
+      style={openNavigation ? {} : {
         backdropFilter: `blur(${blurAmount}px)`,
         backgroundColor: `rgba(255, 255, 255, ${opacityAmount})`
       }}
@@ -61,8 +61,6 @@ const Navbar = () => {
             )
           })}
           <li>
-            {/* <Button className="mr-4 custom-btn-shadow-t px-3 py-1 text-teal-800 text-sm font-semibold border-2 border-teal-800 rounded-lg hover:translate-x-[-2px] hover:translate-y-[2px]">Iniciar Sesión</Button>
-            <Button className="custom-btn-shadow px-3 py-1 text-slate-900 text-sm font-semibold border-2 border-slate-900 rounded-lg hover:translate-x-[-2px] hover:translate-y-[2px]">Registrarse</Button> */}
             <Button className="custom-btn-shadow px-3 py-1 text-slate-900 text-sm font-semibold border-2 border-slate-900 rounded-lg hover:translate-x-[-2px] hover:translate-y-[2px]">
               <MousePointer2 className="mr-2 inline" color="#0f172a" size={16} />
               <span className="inline">Contáctenos</span>
@@ -75,7 +73,7 @@ const Navbar = () => {
         </Button>
 
       </div>
-      {openNavigation && <HamburgerMenu items={navigation} />}
+      {openNavigation && <HamburgerMenu items={navigation} onClick={handleClick} />}
     </nav >
   )
 }
