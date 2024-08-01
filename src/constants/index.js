@@ -6,16 +6,21 @@ const navigation = [
   },
   {
     id: 2,
+    text: "Anuncios",
+    url: "#anuncios"
+  },
+  {
+    id: 3,
     text: "Quienes Somos",
     url: "#about"
   },
   {
-    id: 3,
+    id: 4,
     text: "Oferta Académica",
     url: "#offert"
   },
   {
-    id: 4,
+    id: 5,
     text: "Donde Estamos",
     url: "#location"
   }

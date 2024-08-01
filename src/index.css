@@ -9,6 +9,7 @@ body {
 
 #root {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .roboto-slab {
@@ -101,35 +102,11 @@ body {
   transition: all 0.3s;
 }
 
-.custom-bubble-shadow {
-  box-shadow: 190px -200px 0px 340px #0f766d25;
-  -webkit-box-shadow: 190px -200px 0px 340px #0f766d25;
-  -moz-box-shadow: 190px -200px 0px 340px #0f766d25;
-
-  border-radius: 1000px !important;
-}
-
-.custom-bubble-shadow-mobile::before {
-  content: '';
-  position: absolute;
-  top: -40px;
-  /* Ajusta este valor para mover la sombra arriba del elemento */
-  left: -20px;
-  width: calc(100% + 270px);
-  height: calc(100% + 270px);
-  background: #0f766d25;
-  border-radius: 50%;
-
-  box-shadow: -240px 320px 0px -60px #0f766d25;
-  -webkit-box-shadow: -240px 320px 0px -60px #0f766d25;
-  -moz-box-shadow: -240px 320px 0px -60px #0f766d25;
-}
-
 .custom-lg-vh {
   height: fit-content;
 }
 
-.custom-principal-btn {
+/* .custom-principal-btn {
   position: relative;
 
   display: flex;
@@ -145,6 +122,21 @@ body {
   transform: scale(1.05);
   box-shadow: 0px 5px 20px 1px rgba(15, 118, 110, 0.4);
   transition: all 0.3s;
+} */
+
+.custom-principal-btn {
+  box-shadow: inset 0px -6px 12px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 6px 12px 0px rgba(255, 255, 255, 0.45),
+    0px 3px 10px -1px rgba(0, 0, 0, 0.55);
+  transition: all 0.15s;
+}
+
+.custom-principal-btn:hover {
+  transform: scale(1.05);
+  box-shadow: inset 0px -7px 12px 0px rgba(0, 0, 0, 0.65),
+    inset 0px 7px 12px 0px rgba(255, 255, 255, 0.5),
+    0px 4px 15px 1px rgba(15, 118, 110, 0.55);
+  transition: all 0.3s;
 }
 
 .custom-arrow-hover {
@@ -157,12 +149,24 @@ body {
   transition: all 0.3s;
 }
 
-.custom-scale-svg-hover {
+.custom-scale-svg-hover>svg {
   transition: all 0.15s;
 }
 
 .custom-scale-svg-hover:hover>svg {
   transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+.custom-scale-svg-hover>h4 {
+  display: inline-block;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+  transition: all 0.15s;
+}
+
+.custom-scale-svg-hover:hover>h4 {
+  transform: translate(-2px, -2px);
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.9);
   transition: all 0.3s;
 }
 

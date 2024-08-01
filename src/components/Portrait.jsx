@@ -4,7 +4,7 @@ import { MousePointerClick } from "lucide-react"
 
 const Portrait = () => {
   return (
-    <header className="flex flex-wrap lg:flex-nowrap relative custom-lg-vh bg-transparent mt-8">
+    <header className="flex flex-wrap lg:flex-nowrap relative custom-lg-vh bg-transparent mt-8" id="home">
       <div className="block lg:hidden relative w-full h-32">
         <div className="-z-10 absolute custom-left-middle top-0 h-full aspect-square rounded-full bg-transparent custom-bubble-shadow-mobile"></div>
       </div>
@@ -17,7 +17,7 @@ const Portrait = () => {
           reprehenderit cupiditate consectetur, consequuntur itaque molestias,
           possimus eaque iure numquam eos laboriosam
         </p>
-        <Button className="custom-principal-btn mx-auto mt-12 lg:mr-0 lg:ml-auto lg:mt-4 px-9 py-3 text-slate-100 text-lg lg:text-xl font-semibold rounded-full">
+        <Button className="mx-auto mt-12 lg:mr-0 lg:ml-auto lg:mt-4 px-9 py-3 text-slate-100 text-lg lg:text-xl font-semibold rounded-full bg-teal-700 custom-principal-btn">
           <span className="inline">Agenda ahora</span>
           <MousePointerClick className="ml-4 inline" size={24} />
         </Button>

@@ -1,15 +1,14 @@
-import Anuncios from "./components/Anuncios";
-import Navbar from "./components/Navbar";
-import Portrait from "./components/Portrait";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./HomePage";
+import ComponentWithNavBar from "./components/ComponentWithNavBar"
 
 function App() {
 
   return (
-    <>
-      <Navbar />
-      <Portrait />
-      <Anuncios />
-    </>
+    <Routes>
+      <Route path="/" element={<ComponentWithNavBar component={<HomePage />} />} />
+      <Route path="*" element={<div>Not Found</div>} />
+    </Routes>
   )
 }
 
