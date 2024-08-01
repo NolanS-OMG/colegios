@@ -3,10 +3,11 @@ import { anuncios } from "../constants";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
 import Button from "./Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Slider = ({ className }) => {
+const Slider = ({ className, interval = 5000 }) => {
   const [selectedSlide, setSelectedSlide] = useState(anuncios[0].id);
+
   const changeSlide = (slideOp) => {
     setSelectedSlide(slideOp.slide);
     const sliderContainer = document.getElementById("sliderContainer");
@@ -16,6 +17,7 @@ const Slider = ({ className }) => {
       behavior: "smooth"
     })
   }
+
   const nextSlide = () => {
     let actualIndex = anuncios.findIndex(item => item.id === selectedSlide);
     if (actualIndex + 1 >= anuncios.length) {
@@ -25,6 +27,7 @@ const Slider = ({ className }) => {
     }
     changeSlide({ slide: anuncios[actualIndex].id });
   }
+
   const backSlide = () => {
     let actualIndex = anuncios.findIndex(item => item.id === selectedSlide);
     if (actualIndex - 1 < 0) {
@@ -34,6 +37,14 @@ const Slider = ({ className }) => {
     }
     changeSlide({ slide: anuncios[actualIndex].id })
   }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [selectedSlide]);
 
   return (
     <div className={`relative ${className}`}>
