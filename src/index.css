@@ -9,11 +9,32 @@ body {
 
 #root {
   overflow-x: hidden;
+  overflow-y: hidden;
   scroll-behavior: smooth;
 }
 
 .roboto-slab {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.fira-sans {
   font-family: "Fira Sans", sans-serif;
+}
+
+.ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.bg-teal-80 {
+  background-color: #e8fffa;
+}
+
+.bg-teal-120 {
+  background-color: #b9fff0;
+}
+
+.top-1-5 {
+  top: 20%;
 }
 
 .right-76 {
@@ -27,6 +48,10 @@ body {
 .size-237 {
   width: 60rem;
   height: 60rem;
+}
+
+.h-102 {
+  height: 29rem;
 }
 
 .custom-left-middle {
@@ -104,6 +129,22 @@ body {
 
 .custom-lg-vh {
   height: fit-content;
+}
+
+.custom-bubble-shadow-mobile::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  /* Ajusta este valor para mover la sombra arriba del elemento */
+  left: -20px;
+  width: calc(100% + 270px);
+  height: calc(100% + 270px);
+  background: #0f766d25;
+  border-radius: 50%;
+
+  box-shadow: -240px 320px 0px -60px #0f766d25;
+  -webkit-box-shadow: -240px 320px 0px -60px #0f766d25;
+  -moz-box-shadow: -240px 320px 0px -60px #0f766d25;
 }
 
 /* .custom-principal-btn {
@@ -196,6 +237,100 @@ body {
 
 .-z-1 {
   z-index: -1;
+}
+
+.custom-bubble-bg {
+  background-color: rgb(196, 220, 221);
+}
+
+.custom-card-shadow {
+  box-shadow: 2px 2px 0px 0px #0f172a;
+  -webkit-box-shadow: 2px 2px 0px 0px #0f172a;
+  -moz-box-shadow: 2px 2px 0px 0px #0f172a;
+}
+
+#titleOfertaEducativa::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--before-width-before-titleofertaeducativa, 0%);
+  height: 100%;
+  color: rgb(15 118 110 / 0.2);
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease;
+}
+
+#titleOfertaEducativa::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--before-width-after-titleofertaeducativa, 0%);
+  height: 100%;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #0f172a;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease;
+}
+
+#titleOferta::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--before-width-before-titleoferta, 0%);
+  height: 100%;
+  color: rgb(15 118 110 / 0.2);
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease;
+}
+
+#titleOferta::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--before-width-after-titleoferta, 0%);
+  height: 100%;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0f172a;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease;
+}
+
+#titleEducativa::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--before-width-before-titleeducativa, 0%);
+  height: 100%;
+  color: rgb(15 118 110 / 0.2);
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease;
+}
+
+#titleEducativa::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--before-width-after-titleeducativa, 0%);
+  height: 100%;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0f172a;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease;
 }
 
 /* TAMAÑO lg */

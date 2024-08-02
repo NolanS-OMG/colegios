@@ -35,7 +35,7 @@ const Slider = ({ className, interval = 5000 }) => {
     } else {
       actualIndex -= 1;
     }
-    changeSlide({ slide: anuncios[actualIndex].id })
+    changeSlide({ slide: anuncios[actualIndex].id });
   }
 
   useEffect(() => {

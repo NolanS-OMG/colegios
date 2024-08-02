@@ -1,4 +1,6 @@
+import About from "./components/About";
 import Anuncios from "./components/Anuncios";
+import OfertaEducativa from "./components/OfertaEducativa";
 import Portrait from "./components/Portrait";
 
 function HomePage() {
@@ -6,6 +8,8 @@ function HomePage() {
     <>
       <Portrait />
       <Anuncios />
+      <About />
+      <OfertaEducativa />
     </>
   )
 }

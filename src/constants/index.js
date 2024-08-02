@@ -20,7 +20,7 @@ const navigation = [
     url: "#offert"
   },
   {
-    id: 5,
+    id: 6,
     text: "Donde Estamos",
     url: "#location"
   }
