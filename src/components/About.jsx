@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 const About = () => {
   return (
-    <section id="about" className="flex flex-wrap relative w-full px-4 lg:px-16 py-16 lg:py-12">
+    <section id="about" className="flex flex-wrap relative w-full px-4 lg:px-16 py-16 pt-17 pt-23">
       <SectionTitle title={`¿Quienes somos?`} />
       <div className="w-full lg:w-2/3 lg:h-102 m-0 lg:mt-6 px-2 lg:px-6 flex flex-col">
         <p className="my-4 text-center lg:text-left leading-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque error quisquam asperiores cumque magnam quidem inventore, placeat illo impedit corporis exercitationem veniam alias, itaque tenetur nihil accusamus dolore iste repellat!</p>

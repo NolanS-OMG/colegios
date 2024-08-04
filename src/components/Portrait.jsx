@@ -4,7 +4,7 @@ import { MousePointerClick } from "lucide-react"
 
 const Portrait = () => {
   return (
-    <header className="flex flex-wrap lg:flex-nowrap relative custom-lg-vh bg-transparent mt-8" id="home">
+    <header className="flex flex-wrap lg:flex-nowrap relative custom-lg-vh bg-transparent pt-8" id="home">
       <div className="block lg:hidden relative w-full h-32">
         <div className="-z-10 absolute custom-left-middle top-0 h-full aspect-square rounded-full bg-transparent custom-bubble-shadow-mobile"></div>
       </div>

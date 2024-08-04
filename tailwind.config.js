@@ -9,7 +9,7 @@ export default {
       translate: {
         '-2px': '-2px',
         '2px': '2px',
-        'full-vh': 'calc(100vh - 68px)'
+        "1px": "1px"
       }
     }
   },
