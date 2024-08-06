@@ -62,6 +62,10 @@ body {
   height: 29rem;
 }
 
+.h-cusotm-full {
+  height: calc(100dvh - 3px);
+}
+
 .p-1-5 {
   padding: 0.375rem;
 }
@@ -403,6 +407,32 @@ body {
   z-index: 1;
 }
 
+.custom-login-arrow>svg {
+  color: #334155;
+}
+
+.custom-login-arrow:hover>svg {
+  color: #0f172a;
+}
+
+.custom-return-arrow>svg {
+  color: #0f172a;
+}
+
+.custom-return-arrow:hover>svg {
+  color: rgb(15 118 110 / 0.7);
+}
+
+.custom-return-arrow:hover {
+  color: rgb(15 118 110 / 0.7);
+}
+
+@media (min-width: 768px) {
+  .w-mid {
+    width: 36rem;
+  }
+}
+
 /* TAMAÑO lg */
 @media (min-width: 1024px) {
   .custom-lg-vh {
@@ -423,6 +453,10 @@ body {
 
   .w-192 {
     width: 48rem;
+  }
+
+  .w-card {
+    width: 30% !important;
   }
 }
 

@@ -24,7 +24,7 @@ const Anuncios = () => {
 
   return (
     <section id="anuncios" className="custom-lg-vh z-0 pt-17 mt-12 lg:mt-0 custom-offset-mobile">
-      <Slider className={`w-full lg:h-full aspect-square lg:aspect-auto mx-auto`} arrayToMap={anuncios} Element={AnuncioCard} />
+      <Slider className={`w-full lg:h-full aspect-square md:aspect-video lg:aspect-auto mx-auto`} arrayToMap={anuncios} Element={AnuncioCard} />
     </section>
   )
 }

@@ -5,22 +5,25 @@ import { MousePointerClick } from "lucide-react"
 const Portrait = () => {
   return (
     <header className="flex flex-wrap lg:flex-nowrap relative custom-lg-vh bg-transparent pt-8" id="home">
+
       <div className="block lg:hidden relative w-full h-32">
         <div className="-z-10 absolute custom-left-middle top-0 h-full aspect-square rounded-full bg-transparent custom-bubble-shadow-mobile"></div>
       </div>
+
       <div className="z-10 flex flex-col lg:w-2/4 m-auto">
-        <h1 className="fira-sans text-4xl lg:text-7xl font-medium text-center lg:text-right">
+        <h1 className="fira-sans text-4xl md:text-7xl font-medium text-center lg:text-right">
           El mejor lugar <br /> para <span className="text-teal-800 underline decoration-4 lg:decoration-8">aprender</span>
         </h1>
-        <p className="mx-6 lg:ml-10 mt-4 text-sm lg:text-base">
+        <p className="mx-6 md:mx-10 lg:ml-10 mt-4 text-sm md:text-base">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus suscipit,
           reprehenderit cupiditate consectetur.
         </p>
-        <Button className="mx-auto mt-12 lg:mr-0 lg:ml-auto lg:mt-4 px-9 py-3 text-slate-100 text-lg lg:text-xl font-semibold rounded-full bg-teal-700 custom-principal-btn">
+        <Button className="mx-auto mt-12 md:mt-20 lg:mr-0 lg:ml-auto lg:mt-4 px-9 py-3 md:px-12 md:py-4 lg:px-9 lg:py-3 text-slate-100 text-lg md:text-2xl lg:text-xl font-semibold rounded-full bg-teal-700 custom-principal-btn">
           <span className="inline">Agenda ahora</span>
           <MousePointerClick className="ml-4 inline" size={24} />
         </Button>
       </div>
+
       <div className="hidden lg:block w-2/4 h-full relative">
         <div className="absolute bottom-8 left-40 size-40 rounded-full overflow-hidden">
           <img src="https://neurodesarrollar.com/wp-content/uploads/2017/10/quienes-somos.jpg" alt="" className="object-cover w-full h-full" />
@@ -35,6 +38,7 @@ const Portrait = () => {
         <div className="-z-10 absolute -left-16 bottom-10 size-16 rounded-full custom-bubble-bg"></div>
         <div className="-z-10 absolute -left-192 top-10 size-40 rounded-full custom-bubble-bg"></div>
       </div>
+
     </header>
   )
 }

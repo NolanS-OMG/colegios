@@ -78,8 +78,63 @@ const reviews = [
       { id: "rev0303", img_src: "https://img.freepik.com/psd-gratis/3d-ilustracion-persona-gafas-sol_23-2149436188.jpg?t=st=1722632528~exp=1722633128~hmac=23f5b4ae22d1d082e976a1f7bf1382a261d6ea4b30b81bccf65393a30ae64bad", img_alt: "Imagen de Perfil", name: "Victor", rate: 10, rol: "Alumno", com: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam at possimus alias cum magnam? Repellat, nulla mollitia fuga corporis nostrum obcaecati unde, vel modi sapiente molestias error! Deleniti, rem ab." }
     ]
   },
-]
+];
+
+const accesosLogin = [
+  {
+    id: "login01",
+    text: "Acceso de Alumnos",
+    path: "/login/alumno",
+  },
+  {
+    id: "login02",
+    text: "Acceso de Padres",
+    path: "/login/padre",
+  },
+  {
+    id: "login03",
+    text: "Acceso de Docentes",
+    path: "/login/docente",
+  },
+  {
+    id: "login04",
+    text: "Acceso de Administradores",
+    path: "/login/admin",
+  }
+];
+
+const users = [
+  {
+    tipo: "alumno",
+    nombre: "Javier",
+    apellido: "Ayala",
+    id: "01",
+    password: "0000",
+  },
+  {
+    tipo: "padre",
+    nombre: "María",
+    apellido: "de la Rosa",
+    id: "02",
+    password: "0000",
+  },
+  {
+    tipo: "docente",
+    nombre: "Lucía",
+    apellido: "Rada",
+    id: "03",
+    password: "0000",
+  },
+  {
+    tipo: "admin",
+    nombre: "Carlos",
+    apellido: "Enríquez",
+    id: "04",
+    password: "0000",
+  },
+  null
+];
 
 export {
-  navigation, anuncios, reviews
+  navigation, anuncios, reviews, accesosLogin, users
 }
