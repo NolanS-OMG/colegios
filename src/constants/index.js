@@ -106,7 +106,7 @@ const accesosLogin = [
 const users = [
   {
     tipo: "alumno",
-    nombre: "Javier",
+    nombre: "Fernanda",
     apellido: "Ayala",
     id: "01",
     password: "0000",
