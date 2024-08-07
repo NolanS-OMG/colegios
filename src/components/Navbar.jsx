@@ -38,17 +38,17 @@ const HasUserOptions = ({ user, openLogin, loginMenu, toggleLogin }) => {
 
       <Button className="text-slate-700 font-semibold relative hover:text-slate-900 custom-login-arrow flex items-center" onClick={toggleLogin}>
         <img
-          src="https://img.freepik.com/psd-gratis/3d-ilustracion-persona-cabello-rosado_23-2149436186.jpg?t=st=1722632150~exp=1722632750~hmac=43b3509a8e9562d1d0ce13c00bb88de971b017b512924102f64f2123a099aa31"
-          alt=""
-          className="aspect-square w-8 rounded-full mr-2"
+          src={user?.img_src}
+          alt={user?.img_alt}
+          className="aspect-square w-8 rounded-full mr-2 object-cover"
         />
         <span>{user?.nombre}</span>
         <ChevronDown className={`inline ml-1 mb-px ${openLogin ? "rotate-180" : "rotate-0"} transition-all duration-300`} strokeWidth={2} size={22} />
       </Button>
 
       <div className={`${openLogin ? "block" : "hidden"} ${loginMenu ? "opacity-100" : "opacity-0"} absolute top-full translate-y-1/4 right-0 translate-x-28 w-48 py-2 px-3 my-2 text-xs bg-slate-100 shadow transition-all duration-200`}>
-        <AcceessLink text="Perfil" to={`/usuario/${user?.tipo}`} />
-        <AcceessLink text="Configuración" to={`/usuario/${user?.tipo}`} />
+        <AcceessLink text="Perfil" to={`/usuario/${user?.tipo}/${user?.id}`} />
+        <AcceessLink text="Configuración" to={`/usuario/${user?.tipo}/${user?.id}`} />
         <AcceessLink text="Cerrar Sesión" to={`/login/${user?.tipo}`} />
       </div>
 

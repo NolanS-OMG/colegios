@@ -110,6 +110,8 @@ const users = [
     apellido: "Ayala",
     id: "01",
     password: "0000",
+    img_src: "https://img.freepik.com/psd-premium/ilustracion-3d-nina-joven_665164-267.jpg",
+    img_alt: "Imagen de Perfil"
   },
   {
     tipo: "padre",
@@ -117,6 +119,8 @@ const users = [
     apellido: "de la Rosa",
     id: "02",
     password: "0000",
+    img_src: "https://img.freepik.com/psd-gratis/representacion-3d-avatar_23-2150833538.jpg?w=740&t=st=1722632467~exp=1722633067~hmac=cab5f86b7394be91a7127289e0bf00a2af2de744b5101856391381b66f7be069",
+    img_alt: "Imagen de Perfil"
   },
   {
     tipo: "docente",
@@ -124,6 +128,8 @@ const users = [
     apellido: "Rada",
     id: "03",
     password: "0000",
+    img_src: "https://img.freepik.com/psd-gratis/render-3d-personaje-avatar_23-2150611771.jpg?t=st=1722632331~exp=1722632931~hmac=36235fcf85df56c4599ef33f5df1c1d825cd9de620dc087c63d1358ae4442a9e",
+    img_alt: "Imagen de Perfil"
   },
   {
     tipo: "admin",
@@ -131,10 +137,39 @@ const users = [
     apellido: "Enríquez",
     id: "04",
     password: "0000",
+    img_src: "https://img.freepik.com/psd-gratis/3d-ilustracion-persona-cabello-rosado_23-2149436186.jpg?t=st=1722632150~exp=1722632750~hmac=43b3509a8e9562d1d0ce13c00bb88de971b017b512924102f64f2123a099aa31",
+    img_alt: "Imagen de Perfil"
   },
   null
 ];
 
+const alumnoIndexSlider = [
+  {
+    materia: "Español",
+    promedio: 96,
+    totalExamenes: 5,
+    totalTareas: 20,
+    examenes: 3,
+    tareas: 14,
+  },
+  {
+    materia: "Matemáticas",
+    promedio: 84,
+    totalExamenes: 6,
+    totalTareas: 15,
+    examenes: 5,
+    tareas: 14,
+  },
+  {
+    materia: "Geografía",
+    promedio: 90,
+    totalExamenes: 10,
+    totalTareas: 10,
+    examenes: 7,
+    tareas: 9,
+  },
+]
+
 export {
-  navigation, anuncios, reviews, accesosLogin, users
+  navigation, anuncios, reviews, accesosLogin, users, alumnoIndexSlider
 }

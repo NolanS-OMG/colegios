@@ -7,9 +7,13 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-#root {
+/* #root {
   overflow-x: hidden;
   overflow-y: hidden;
+  scroll-behavior: smooth;
+} */
+body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -68,6 +72,28 @@ body {
 
 .p-1-5 {
   padding: 0.375rem;
+}
+
+.border-16 {
+  border-width: 16px;
+}
+
+.row-end-17 {
+  grid-row-end: 17;
+}
+
+.custom-h-events {
+  height: calc(100% - 46px);
+}
+
+
+
+/* Firefox */
+.custom-h-events {
+  scrollbar-width: thin;
+  /* Width of the scrollbar */
+  scrollbar-color: rgb(13 148 136 / 0.7) #f1f1f1;
+  /* Color of the scrollbar thumb and track */
 }
 
 .custom-offset::before {
@@ -420,12 +446,61 @@ body {
 }
 
 .custom-return-arrow:hover>svg {
-  color: rgb(15 118 110 / 0.7);
+  color: rgb(13 148 136 / 0.7);
 }
 
 .custom-return-arrow:hover {
-  color: rgb(15 118 110 / 0.7);
+  color: rgb(13 148 136 / 0.7);
 }
+
+.custom-grid-dashboard {
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+}
+
+.custom-dashboard-link-hover {
+  color: #94a3b8;
+}
+
+.custom-dashboard-link-hover>svg {
+  color: #94a3b8;
+}
+
+.custom-dashboard-link-hover:hover {
+  color: rgb(13 148 136 / 0.7);
+}
+
+.custom-dashboard-link-hover:hover>svg {
+  color: rgb(13 148 136 / 0.7);
+}
+
+.custom-dashboard-selected {
+  position: relative;
+  color: rgb(13 148 136 / 0.7);
+}
+
+.custom-dashboard-selected>svg {
+  color: rgb(13 148 136 / 0.7);
+}
+
+.custom-dashboard-selected::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  left: -24px;
+  background: rgb(15 118 110 / 0.7);
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* .custom-grid-index-dashboard {
+  display: grid;
+  grid-template-columns: repeat(12fr);
+  grid-template-rows: auto;
+} */
 
 @media (min-width: 768px) {
   .w-mid {
@@ -457,6 +532,10 @@ body {
 
   .w-card {
     width: 30% !important;
+  }
+
+  .custom-h-dashboard {
+    height: calc(100dvh - 3px);
   }
 }
 

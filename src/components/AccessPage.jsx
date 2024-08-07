@@ -4,6 +4,7 @@ import { MoveLeft, MoveRight } from "lucide-react"
 import LabelInput from "./LabelInput";
 import Button from "./Button.jsx";
 import { useEffect, useState } from "react";
+import { useUserContext } from "../context/UserContext.jsx";
 
 const getTitle = (path) => {
   if (path === "alumno") {
@@ -25,6 +26,8 @@ const AccessPage = () => {
   const location = useLocation();
   const [title, setTitle] = useState(getTitle(location.pathname.split("/")[2]));
 
+  const [user, setUser] = useUserContext();
+
   useEffect(() => {
     setTitle(getTitle(location.pathname.split("/")[2]));
   }, [location]);
@@ -44,7 +47,7 @@ const AccessPage = () => {
 
         <div className="flex mt-4">
           {/* <Button className="mx-auto rounded-lg bg-slate-700 text-slate-200 font-semibold text-base md:text-xl lg:text-base py-2 px-4 hover:bg-slate-700/90 hover:text-slate-100 transition-all duration-200">Ingresar</Button> */}
-          <Link to={`/usuario/${location.pathname.split("/")[2]}`} className="mx-auto rounded-lg bg-slate-700 text-slate-200 font-semibold text-base md:text-xl lg:text-base py-2 px-4 hover:bg-slate-700/90 hover:text-slate-100 transition-all duration-200">Ingresar</Link>
+          <Link to={`/usuario/${location.pathname.split("/")[2]}/${user?.id}`} className="mx-auto rounded-lg bg-slate-700 text-slate-200 font-semibold text-base md:text-xl lg:text-base py-2 px-4 hover:bg-slate-700/90 hover:text-slate-100 transition-all duration-200">Ingresar</Link>
         </div>
 
         <Link to="../recuperar-id" className="block text-xs md:text-base lg:text-xs mt-4 text-slate-900 hover:text-teal-700/70">¿Olvidaste tu ID?</Link>
