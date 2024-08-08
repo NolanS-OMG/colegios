@@ -7,11 +7,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-/* #root {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-} */
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -86,14 +81,34 @@ body {
   height: calc(100% - 46px);
 }
 
-
-
-/* Firefox */
 .custom-h-events {
   scrollbar-width: thin;
-  /* Width of the scrollbar */
   scrollbar-color: rgb(13 148 136 / 0.7) #f1f1f1;
-  /* Color of the scrollbar thumb and track */
+}
+
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(13 148 136 / 0.7) #f1f1f1;
+}
+
+.custom-h-index-side {
+  height: calc(100dvh - 58px);
+}
+
+.custom-h-inner-side {
+  height: calc(50% - 16px);
+}
+
+.custom-h-index-content {
+  height: calc(100% - 192px - 16px);
+}
+
+.custom-h-index-material-grid {
+  height: calc(100% - 36px);
+}
+
+.custom-h-index-chat {
+  height: calc(100% - 52px);
 }
 
 .custom-offset::before {

@@ -124,7 +124,7 @@ const users = [
   },
   {
     tipo: "docente",
-    nombre: "Lucía",
+    nombre: "Rodolfo",
     apellido: "Rada",
     id: "03",
     password: "0000",

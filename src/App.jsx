@@ -30,6 +30,7 @@ function App() {
 
         <Route path="/usuario">
           <Route index element={<Dashboard />} />
+
           <Route path="alumno/:id" element={<Dashboard />}>
             <Route index element={<DashboardIndex />} />
             <Route path="calendario" element={<div>CALENDARIO</div>} />
@@ -38,9 +39,27 @@ function App() {
             <Route path="material" element={<div>MATERIAL</div>} />
             <Route path="asistencia" element={<div>ASISTENCIA</div>} />
           </Route>
-          <Route path="padre/:id" element={<Dashboard />} />
-          <Route path="docente/:id" element={<Dashboard />} />
+
+          <Route path="padre/:id" element={<Dashboard />}>
+            <Route index element={<div></div>} />
+            <Route path="calendario" element={<div>CALENDARIO</div>} />
+            <Route path="calificaciones" element={<div>CALIFICACIONES</div>} />
+            <Route path="tareas" element={<div>TAREAS</div>} />
+            <Route path="material" element={<div>MATERIAL</div>} />
+            <Route path="asistencia" element={<div>ASISTENCIA</div>} />
+          </Route>
+
+          <Route path="docente/:id" element={<Dashboard />} >
+            <Route index element={<div></div>} />
+            <Route path="calendario" element={<div>CALENDARIO</div>} />
+            <Route path="calificaciones" element={<div>CALIFICACIONES</div>} />
+            <Route path="tareas" element={<div>TAREAS</div>} />
+            <Route path="material" element={<div>MATERIAL</div>} />
+            <Route path="asistencia" element={<div>ASISTENCIA</div>} />
+          </Route>
+
           <Route path="admin/:id" element={<Dashboard />} />
+
         </Route>
 
         <Route path="*" element={<div>Not Found</div>} />
