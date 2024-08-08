@@ -6,6 +6,8 @@ import Button from "./Button.jsx";
 import { useEffect, useState } from "react";
 import { useUserContext } from "../context/UserContext.jsx";
 
+import { users } from "../constants";
+
 const getTitle = (path) => {
   if (path === "alumno") {
     return "Acceso de Alumnos";
@@ -13,13 +15,29 @@ const getTitle = (path) => {
   if (path === "padre") {
     return "Acceso de Padres";
   }
-  if (path === "profesor") {
+  if (path === "docente") {
     return "Acceso de Profesores";
   }
   if (path === "admin") {
     return "Acceso de Administradores";
   }
   return "";
+}
+
+const getUser = (type) => {
+  if (type === "alumno") {
+    return users[0];
+  }
+  if (type === "padre") {
+    return users[1];
+  }
+  if (type === "docente") {
+    return users[2];
+  }
+  if (type === "admin") {
+    return users[3];
+  }
+  return null;
 }
 
 const AccessPage = () => {
@@ -29,8 +47,9 @@ const AccessPage = () => {
   const [user, setUser] = useUserContext();
 
   useEffect(() => {
+    setUser(getUser(location.pathname.split("/")[2]));
     setTitle(getTitle(location.pathname.split("/")[2]));
-  }, [location]);
+  }, [location, user]);
 
   return (
     <div className="relative flex w-full h-cusotm-full">
