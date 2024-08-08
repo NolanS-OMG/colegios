@@ -111,6 +111,10 @@ body {
   height: calc(100% - 52px);
 }
 
+.custom-h-padre-front {
+  height: calc(100dvh - 84px);
+}
+
 .custom-offset::before {
   content: '';
   display: block;

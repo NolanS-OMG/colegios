@@ -1,7 +1,7 @@
 import { useUserContext } from "../context/UserContext";
 
 import {
-  House, CalendarDays, BookOpenCheck, PencilLine, NotepadText, Headset, MoveLeft, LogOut, UserRoundCheck,
+  House, CalendarDays, BookOpenCheck, PencilLine, NotepadText, Headset, MoveLeft, LogOut, UserRoundCheck, Landmark, Wallet,
   ChevronDown, Bell, MessageSquareText
 } from "lucide-react";
 import { useState } from "react";
@@ -11,8 +11,6 @@ import Button from "./Button.jsx";
 
 const DashboardLink = ({ path, text, icon }) => {
   const location = useLocation();
-
-  console.log(location.pathname, path);
 
   const renderLink = () => (
     <Link to={path} className={`custom-dashboard-link-hover px-2 py-1 flex items-center gap-3 font-semibold text-lg`}>
@@ -48,6 +46,7 @@ const Dashboard = () => {
             <li className="px-6 my-2"><DashboardLink icon={<PencilLine strokeWidth={2} />} text="Tareas" path={`/usuario/${user.tipo}/${user.id}/tareas`} /></li>
             <li className={`px-6 my-2 ${user.tipo === "alumno" ? "block" : (user.tipo === "docente" ? "block" : "hidden")}`}><DashboardLink icon={<NotepadText strokeWidth={2} />} text="Material Didáctico" path={`/usuario/${user.tipo}/${user.id}/material`} /></li>
             <li className="px-6 my-2"><DashboardLink icon={<UserRoundCheck strokeWidth={2} />} text="Asistencia" path={`/usuario/${user.tipo}/${user.id}/asistencia`} /></li>
+            <li className={`px-6 my-2 ${user.tipo === "padre" ? "block" : "hidden"}`}><DashboardLink icon={<Wallet strokeWidth={2} />} text="Pagos" path={`/usuario/${user.tipo}/${user.id}/pagos`} /></li>
 
             <li className="px-6 mt-auto mb-2"><Link to="/"><Headset strokeWidth={1.5} size={20} className="inline" /><span className="text-sm inline ml-2">Soporte</span></Link></li>
             <li className="px-6 mb-2"><Link to="/"><MoveLeft strokeWidth={1.5} size={20} className="inline" /><span className="text-sm inline ml-2">Volver al Inicio</span></Link></li>

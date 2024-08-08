@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useUserContext } from "../../context/UserContext";
 import Button from "../Button";
+import Event from "./Event";
 
 import { MoveRight } from "lucide-react";
 
@@ -31,24 +32,7 @@ const MaterialCard = ({ img_url, img_alt, type, title, buttonText }) => {
   )
 }
 
-const Event = ({ numero, mes, titulo, hora, shortDesc }) => {
-  return (
-    <article className="h-14 mt-2 mb-6 flex">
-      <div className="aspect-square h-full rounded-xl bg-teal-600/70 flex flex-col justify-center items-center">
-        <span className="text-2xl font-semibold text-slate-50 w-fit mx-auto">
-          {numero}
-        </span>
-        <span className="text-xs text-slate-50 w-fit mx-auto -mt-2">{mes}</span>
-      </div>
-      <div className="flex flex-col w-full px-2 text-slate-700">
-        <div className="flex justify-between items-center"><h4 className="font-bold text-slate-900">{titulo}</h4><span className="text-sm font-semibold text-slate-500">{hora}</span></div>
-        <p className="font-light text-xs">{shortDesc}</p>
-      </div>
-    </article>
-  )
-}
-
-const Index = () => {
+const IndexAlumno = () => {
   const [user, setUser] = useUserContext();
   const [side, setSide] = useState(0);
 
@@ -88,7 +72,7 @@ const Index = () => {
                 </p>
               </div>
               <div className="px-4 w-full">
-                <h4 className="text-lg font-semibold">Examenes</h4>
+                <h4 className="text-lg font-semibold">Exámenes</h4>
                 <p className="py-1 px-3 rounded-full bg-slate-300/50 font-semibold text-slate-600 w-fit text-sm">
                   Completados: <strong className="text-teal-600/80">3</strong>/5
                 </p>
@@ -170,7 +154,7 @@ const Index = () => {
           </ul>
 
           <div className={`px-4 ${side === 0 ? "block" : "hidden"} overflow-auto custom-h-events`}>
-            <Event numero={28} mes={`Sep`} titulo={"Español"} hora={"11:59pm"} shortDesc={"Reseña del libro cuento leído en clase"} />
+            <Event numero={28} mes={`Sep`} titulo={"Español"} hora={"11:59pm"} shortDesc={"Reseña del cuento leído en clase"} />
             <Event numero={3} mes={`Oct`} titulo={"Biología"} hora={"11:59am"} shortDesc={"Responder cuestionario de la etapa 3"} />
             <Event numero={7} mes={`Oct`} titulo={"Matemáticas"} hora={"11:59am"} shortDesc={"Responder el laboratorio de problemas de la etapa 2"} />
             <Event numero={16} mes={`Oct`} titulo={"Matemáticas"} hora={"11:59am"} shortDesc={"Responder el laboratorio de problemas de la etapa 3"} />
@@ -221,4 +205,4 @@ const Index = () => {
   )
 }
 
-export default Index;
+export default IndexAlumno;
