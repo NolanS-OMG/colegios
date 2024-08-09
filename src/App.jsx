@@ -6,6 +6,7 @@ import Dashboard from "./components/Dashboard.jsx";
 
 import IndexAlumno from "./components/Dashboard/IndexAlumno.jsx";
 import IndexPadre from "./components/Dashboard/IndexPadre.jsx";
+import IndexDocente from "./components/Dashboard/IndexDocente.jsx";
 
 import { UserContext } from "./context/UserContext.jsx";
 import { useState } from "react";
@@ -51,7 +52,7 @@ function App() {
           </Route>
 
           <Route path="docente/:id" element={<Dashboard />} >
-            <Route index element={<div></div>} />
+            <Route index element={<IndexDocente />} />
             <Route path="calendario" element={<div>CALENDARIO</div>} />
             <Route path="calificaciones" element={<div>CALIFICACIONES</div>} />
             <Route path="tareas" element={<div>TAREAS</div>} />

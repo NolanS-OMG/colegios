@@ -2,8 +2,7 @@ import { useState } from "react";
 import { useUserContext } from "../../context/UserContext";
 import Button from "../Button";
 import Event from "./Event";
-
-import { MoveRight } from "lucide-react";
+import MaterialCard from "./MaterialCard";
 
 const ChatCard = ({ img_url, img_alt, title, type }) => {
   return (
@@ -17,18 +16,6 @@ const ChatCard = ({ img_url, img_alt, title, type }) => {
         <p className="ubuntu text-slate-400">{type}</p>
       </div>
     </div>
-  )
-}
-
-const MaterialCard = ({ img_url, img_alt, type, title, buttonText }) => {
-  return (
-    <article className="overflow-hidden rounded-xl border border-gray-100 shadow">
-      <img className="w-full h-3/4 object-cover" src={img_url} alt={img_alt} />
-      <div className="w-full h-1/4 text-sm text-slate-900 px-2 flex flex-col">
-        <p className="ubuntu whitespace-nowrap overflow-hidden text-ellipsis">{`${title} `}<span className="font-semibold">{`[${type}]`}</span></p>
-        <Button className={`underline ml-auto mt-auto text-xs`}><span>{buttonText}</span><MoveRight className="inline ml-1" size={16} strokeWidth={1.5} color="#0f172a" /></Button>
-      </div>
-    </article>
   )
 }
 

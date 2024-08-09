@@ -115,6 +115,10 @@ body {
   height: calc(100dvh - 84px);
 }
 
+.custom-h-docente {
+  height: calc(100% - 224px);
+}
+
 .custom-offset::before {
   content: '';
   display: block;
